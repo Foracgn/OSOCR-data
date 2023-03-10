@@ -2,16 +2,16 @@ echo $1
 #CAC1=$1
 #SRC=$2
 # data downloaded
-SRC=/home/sunhongyi/桌面/sunhongyi/OSOCR-data/
+SRC=/home/sunhongyi/桌面/sunhongyi/ocr-data/
 
 # cache dir 1 (100GiB~)
 CAC1=/home/sunhongyi/桌面/sunhongyi/CAC1/
 
 # cache dir 2 (GiB~)
-CAC1=/home/sunhongyi/桌面/sunhongyi/CAC2/
+CAC2=/home/sunhongyi/桌面/sunhongyi/CAC2/
 
 # generated dataset dir (GiB~)
-CAC1=/home/sunhongyi/桌面/sunhongyi/EXP/
+EXP=/home/sunhongyi/桌面/sunhongyi/EXP/
 
 CODE_ROOT=${PWD}/code
 #
@@ -84,4 +84,5 @@ export PYTHONPATH=${CODE_ROOT}
 python osocr_tasks/tasksg1/ch_jap_osocr/make_dataset_2.py ${CAC1} ${CAC2} ${EXP}
 #rm ${CAC2}/* -r
 python osocr_tasks/tasksg1/hwdb_fslchr/make_dataset.py ${CAC1} ${CAC2} ${EXP}
+python osocr_tasks/tasksg1/ctw_fslchr/make_dataset.py ${CAC1} ${CAC2} ${EXP}
 python osocr_tasks/tasksg1/char_rej.py ${EXP}
