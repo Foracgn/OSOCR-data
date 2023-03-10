@@ -2,16 +2,16 @@ echo $1
 #CAC1=$1
 #SRC=$2
 # data downloaded
-SRC=/run/media/lasercat/projects_001/OSOCR-data/
+SRC=/home/sunhongyi/桌面/sunhongyi/OSOCR-data/
 
 # cache dir 1 (100GiB~)
-CAC1=/run/media/lasercat/writebuffer/deploy/
+CAC1=/home/sunhongyi/桌面/sunhongyi/CAC1/
 
 # cache dir 2 (GiB~)
-CAC2=/run/media/lasercat/writebuffer/cachededlmdbs/
+CAC1=/home/sunhongyi/桌面/sunhongyi/CAC2/
 
 # generated dataset dir (GiB~)
-EXP=/run/media/lasercat/cache2/
+CAC1=/home/sunhongyi/桌面/sunhongyi/EXP/
 
 CODE_ROOT=${PWD}/code
 #
