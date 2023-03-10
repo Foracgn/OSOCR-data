@@ -48,10 +48,10 @@ def buildhwdb(trfulldb, tefulldb, compdb, droot):
 if __name__ == '__main__':
     import sys
 
-    if (len(sys.argv) > 1):
-        ROOT = sys.argv[1];
-        CROOT = sys.argv[2];
-        DROOT = sys.argv[3];
+    if len(sys.argv) > 1:
+        ROOT = sys.argv[1]
+        CROOT = sys.argv[2]
+        DROOT = sys.argv[3]
     else:
         ROOT = "/run/media/lasercat/writebuffer/deploy/"
         CROOT = "/run/media/lasercat/writebuffer/cachededlmdbs/"
@@ -61,14 +61,14 @@ if __name__ == '__main__':
     tegnt = ROOT + "hwdb/test/"
     i13gnt = ROOT + "hwdb/comp/"
 
-    trfulldbdst = CROOT + "HWDB/hwdbtr";
-    tefulldbdst = CROOT + "HWDB/hwdbte";
+    trfulldbdst = CROOT + "HWDB/hwdbtr"
+    tefulldbdst = CROOT + "HWDB/hwdbte"
     i13fulldbdst = CROOT + "HWDB/hwdbco"
-    fsltsks = DROOT + "HWDB/pami_ch_fsl_hwdb";
+    fsltsks = DROOT + "HWDB/pami_ch_fsl_hwdb"
     fnts = [ROOT + "fonts/NotoSansCJK-Regular.ttc"]
-    make_hwdb(trgnt, trfulldbdst);
-    make_hwdb(tegnt, tefulldbdst);
-    make_hwdb(i13gnt, i13fulldbdst);
-    os.makedirs(fsltsks, exist_ok=True);
-    buildhwdb(trfulldbdst, tefulldbdst, i13fulldbdst, fsltsks);
-    scanfolder_and_add_pt(fsltsks, fnts, set(), set());
+    make_hwdb(trgnt, trfulldbdst)
+    make_hwdb(tegnt, tefulldbdst)
+    make_hwdb(i13gnt, i13fulldbdst)
+    os.makedirs(fsltsks, exist_ok=True)
+    buildhwdb(trfulldbdst, tefulldbdst, i13fulldbdst, fsltsks)
+    scanfolder_and_add_pt(fsltsks, fnts, set(), set())

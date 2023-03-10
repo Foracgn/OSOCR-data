@@ -28,16 +28,6 @@ tar -xvf train_task2_images.tar.gz  --directory ${CAC1}/art
 cp *json* ${CAC1}/art/;
 cd ../
 
-mkdir -p ${CAC1}/ctw/gtar
-mkdir -p ${CAC1}/ctw/itar
-cd ${SRC}/ctw
-cd itar
-for i in $(ls);
-do
-   tar -xvf ${i} --directory ${CAC1}/ctw/itar;
-done;
-cd ../
-tar -xvf gtar/ctw-annotations.tar.gz  --directory ${CAC1}/ctw/gtar;
 
 cd ${SRC}/mlt
 rm -r ${CAC1}/mlt
@@ -64,19 +54,6 @@ cd ${SRC}/lsvt
     mv train_full_images_0/* imgs;
     mv train_full_images_1/* imgs;
     rmdir *
-cd ${SRC}
-
-
-cd ${SRC}/rctw_train
-mkdir -p ${CAC1}/rctw_train
-for i in $(ls | grep zip)
-do
-    unzip $i -d ${CAC1}/rctw_train;
-done;
-cd ${CAC1}/rctw_train
-mkdir train
-mv */* train/
-rmdir *
 cd ${SRC}
 
 
@@ -107,5 +84,4 @@ export PYTHONPATH=${CODE_ROOT}
 python osocr_tasks/tasksg1/ch_jap_osocr/make_dataset_2.py ${CAC1} ${CAC2} ${EXP}
 #rm ${CAC2}/* -r
 python osocr_tasks/tasksg1/hwdb_fslchr/make_dataset.py ${CAC1} ${CAC2} ${EXP}
-python osocr_tasks/tasksg1/ctw_fslchr/make_dataset.py ${CAC1} ${CAC2} ${EXP}
 python osocr_tasks/tasksg1/char_rej.py ${EXP}
