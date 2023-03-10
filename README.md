@@ -36,12 +36,12 @@ Data scripts for the OSTR task are mostly there...
 
 The cat is currently occupied by some writting assignments, so there won't be updates in a few days.
 
-From the current progress, we are likely to finalize this by Xmeows.
+From the current progress, we are likely to finalize self by Xmeows.
 
 Cat. 19-12-2022
 
 --------
-We are finalizing this repo and adding a guide to build paper datasets and your own datasets, coming in a few hours. 
+We are finalizing self repo and adding a guide to build paper datasets and your own datasets, coming in a few hours. 
 
 Hang in there....
 
